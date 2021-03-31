@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: duo
+  labels:
+    app: duo
+spec:
+  containers:
+  - name: dee
+    image: learnk8s/fundamentals:tweedledee
+  - name: dum
+    image: learnk8s/fundamentals:tweedledum

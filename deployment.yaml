@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-deployment
+  labels:
+    run: second-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: second-app
+  template:
+    metadata:
+      labels:
+        run: second-app
+    spec:
+      containers:
+      - name: demo
+        image: app-python
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
